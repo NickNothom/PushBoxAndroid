@@ -1,0 +1,226 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView3"
+        android:src="@drawable/googleblur"
+        android:scaleType="centerCrop"
+        android:translationZ="0dp" />
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:id="@+id/topspace" />
+
+    <com.andexert.library.RippleView
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg"
+        android:elevation="15dp"
+        android:id="@+id/lightCard"
+        android:padding="10dp"
+        android:layout_below="@+id/topspace"
+        android:clickable="true"
+        app:rv_rippleDuration="200"
+        app:rv_color="@color/accent"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:tint="#FFFFFF"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false"
+            android:src="@drawable/ic_wb_incandescent_black_24dp"
+            android:longClickable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Lights"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/button7"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_toLeftOf="@+id/button8"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="lightOff"
+            android:clickable="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:id="@+id/button8"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="lightOn"
+            android:clickable="true"
+            android:elegantTextHeight="false" />
+
+    </com.andexert.library.RippleView>
+
+
+    <com.andexert.library.RippleView
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg"
+        android:elevation="15dp"
+        android:layout_margin="20dp"
+        android:id="@+id/fanCard"
+        android:padding="10dp"
+        android:layout_below="@+id/lightCard"
+        android:clickable="true"
+        app:rv_rippleDuration="200"
+        app:rv_color="@color/accent"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/button9"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_toLeftOf="@+id/button10"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="fanOff" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_toys_black_24dp"
+            android:tint="#FFFFFF"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fan"
+            android:id="@+id/textView2"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:id="@+id/button10"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="fanOn" />
+
+    </com.andexert.library.RippleView>
+
+<com.andexert.library.RippleView
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg"
+        android:elevation="15dp"
+        android:layout_margin="20dp"
+        android:id="@+id/candleCard"
+        android:padding="10dp"
+        android:layout_below="@+id/fanCard"
+        android:clickable="true"
+        app:rv_rippleDuration="200"
+        app:rv_color="@color/accent"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/button11"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_toLeftOf="@+id/button12"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="candleOff" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView4"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_whatshot_black_24dp"
+            android:tint="#FFFFFF"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Candle"
+            android:id="@+id/textView3"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:id="@+id/button12"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="candleOn" />
+</com.andexert.library.RippleView>
+
+
+</RelativeLayout>
