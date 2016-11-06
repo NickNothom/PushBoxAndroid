@@ -222,5 +222,71 @@
             android:onClick="candleOn" />
 </com.andexert.library.RippleView>
 
+    <com.andexert.library.RippleView
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg"
+        android:elevation="15dp"
+        android:layout_margin="20dp"
+        android:id="@+id/purifierCard"
+        android:padding="10dp"
+        android:layout_below="@+id/candleCard"
+        android:clickable="true"
+        app:rv_rippleDuration="200"
+        app:rv_color="@color/accent"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:id="@+id/purifierOff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_toLeftOf="@+id/purifierOn"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="candleOff" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/purifierImage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_cloud_black_24dp"
+            android:tint="#FFFFFF"
+            android:baselineAlignBottom="false"
+            android:cropToPadding="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Purifier"
+            android:id="@+id/purifierText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-thin"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On"
+            android:id="@+id/purifierOn"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="true"
+            android:background="#00000000"
+            android:textColor="#4DB6AC"
+            android:textSize="15dp"
+            android:onClick="candleOn" />
+    </com.andexert.library.RippleView>
+
 
 </RelativeLayout>
