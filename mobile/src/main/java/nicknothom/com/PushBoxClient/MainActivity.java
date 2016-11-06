@@ -80,6 +80,15 @@ public class MainActivity extends Activity {
         new HTTPCalls().execute(cmd);
     }
 
+    public void purifierOn(View v) throws IOException {
+        String cmd = "e=0";
+        new HTTPCalls().execute(cmd);
+    }
+    public void purifierOff(View v) throws IOException {
+        String cmd = "e=1";
+        new HTTPCalls().execute(cmd);
+    }
+
 
     public boolean isConnectedTo(String testSSID){
         WifiManager wifiManager = (WifiManager) getSystemService(WIFI_SERVICE);
